@@ -15,7 +15,7 @@ def main():
 
     parser.add_argument('file_name', type=str, help='Insert the file name.')
     parser.add_argument('-v', '--verbose', action='store_true', help='Additional info.')
-    parser.add_argument('-a', '--arguments', choices=['ast', 'line', 'both'], help='Choose which checks you wish to do.')
+    parser.add_argument('-a', '--arguments', choices=['ast', 'line', 'both'], default='both', help='Choose which checks you wish to do.')
 
     args = parser.parse_args()
 
@@ -49,4 +49,5 @@ def main():
 
 
 if __name__ == '__main__':
+
     main()
